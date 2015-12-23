@@ -6,7 +6,7 @@
 ###############################
 sendSMS(){
 source /etc/environment
-msg='{"src": "9882102908","dst": "+9197361XXXXX", "text": "'$1'"}'
+msg='{"src": "98821XXXXX","dst": "+9197361XXXXX", "text": "'$1'"}'
 resp=`curl -i --user $AUTH_ID:$AUTH_TOKEN -H "Content-Type: application/json" -d "$msg" -s https://api.plivo.com/v1/Account/$AUTH_ID/Message/`
 }
 # check whether this script is run by root user or not
